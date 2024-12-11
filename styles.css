@@ -126,7 +126,7 @@ ul li::before {
 }
 
 
-/* Buttons and Links */
+/* General Buttons and Links */
 button, a {
     font-size: 1em;
     background: linear-gradient(45deg, #ff4d4d, #4d4dff);
@@ -142,6 +142,32 @@ button, a {
 button:hover, a:hover {
     background: linear-gradient(45deg, #4d4dff, #ff4d4d);
     transform: scale(1.1) rotate(-2deg);
+}
+
+/* Specific styles for certificates */
+#certificates a {
+    background: none; /* No gradient background */
+    color: inherit; /* Inherit the text color */
+    text-decoration: none; /* Remove the default underline */
+    font-weight: bold;
+    text-transform: none; /* Set text to normal case */
+    display: inline-block; /* Ensure the link behaves like a block element */
+    padding-bottom: 2px; /* Add space for the underline */
+    position: relative; /* Needed for the pseudo-element */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove any margin */
+    padding-left: 0; /* Ensure no extra padding on the left */
+}
+
+/* Gradient underline */
+#certificates a::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Position at the bottom of the link */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the link */
+    height: 3px; /* Adjust thickness of the underline */
+    background: linear-gradient(45deg, #ff4d4d, #4d4dff); /* Gradient underline */
 }
 
 /* Projects */
@@ -220,9 +246,6 @@ button:hover, a:hover {
     transform: scale(1.1) rotate(-2deg); /* Added scaling and rotation */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect on hover */
 }
-
-
-
 
 /* Footer */
 .footer {
