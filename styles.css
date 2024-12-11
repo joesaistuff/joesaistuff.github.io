@@ -205,20 +205,22 @@ button:hover, a:hover {
 }
 
 .skills span {
+    font-size: 1em;
     background: linear-gradient(45deg, #ff4d4d, #4d4dff); /* Gradient background */
     color: white;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Adjusted padding for button-like look */
     border-radius: 5px;
-    font-size: 1em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
 }
 
 .skills span:hover {
     background: linear-gradient(45deg, #4d4dff, #ff4d4d); /* Inverse gradient on hover */
-    transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1) rotate(-2deg); /* Added scaling and rotation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect on hover */
 }
+
 
 
 
@@ -232,14 +234,23 @@ button:hover, a:hover {
 }
 
 .footer a {
-    color: #4d94ff;
+    display: inline-block;
+    font-size: 1em;
+    background: linear-gradient(45deg, #ff4d4d, #4d4dff); /* Same gradient as the button */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    transition: color 0.3s;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+    margin: 10px; /* Optional: for spacing between links */
 }
 
 .footer a:hover {
-    color: #ff4d94;
+    background: linear-gradient(45deg, #4d4dff, #ff4d4d); /* Inverse gradient on hover */
+    transform: scale(1.1) rotate(-2deg);
 }
+
 
 /* Animations */
 @keyframes glitch-border {
@@ -309,4 +320,3 @@ button:hover, a:hover {
         padding: 8px 12px;
     }
 }
-
