@@ -206,10 +206,11 @@ button:hover, a:hover {
     object-fit: cover;
     margin-bottom: 10px;
     transition: filter 0.3s;
+    filter: hue-rotate(90deg);
 }
 
 .project-preview:hover {
-    filter: hue-rotate(90deg);
+    filter: none;
 }
 
 .project-info {
